@@ -1,119 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmación | Lina</title>
-    <link rel="stylesheet" href="assets/formulario.css">
-</head>
-
-<body>
-<main class="formulario-pagina">
-    <div class="tarjeta-formulario">
-
-        <p class="mini">100 AÑOS</p>
-        <h1>Lina</h1>
-        <div class="ornamento">❦</div>
-
-        <h2>¿Nos acompañás?</h2>
-
-        <p class="introduccion">
-            Queremos celebrar este momento tan especial junto a vos.
-            <br><br>
-            La fecha de la celebración se anunciará próximamente.
-        </p>
-
-        <form id="formularioRSVP" action="https://formspree.io/f/mqpkepzv" method="POST">
-
-            <div class="campo">
-                <label for="nombre">¿Cuál es tu nombre?</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre" required>
-            </div>
-
-            <div class="campo">
-                <label>¿Vas a acompañarnos?</label>
-
-                <div class="opciones">
-                    <button type="button" class="opcion asistencia" data-value="si">Sí, voy a estar</button>
-                    <button type="button" class="opcion asistencia" data-value="no">No voy a poder</button>
-                </div>
-
-                <input type="hidden" id="asistencia" name="asistencia" required>
-            </div>
-
-            <div id="preguntasSi" class="preguntas-ocultas">
-
-                <div class="campo">
-                    <label>¿Venís acompañado/a?</label>
-                    <div class="opciones">
-                        <button type="button" class="opcion acompanado" data-value="si">Sí</button>
-                        <button type="button" class="opcion acompanado" data-value="no">No</button>
-                    </div>
-                    <input type="hidden" id="acompanado" name="acompanado">
-                </div>
-
-                <div id="cantidadAcompanantes" class="campo oculto">
-                    <label>¿Cuántas personas vienen con vos?</label>
-                    <div class="contador">
-                        <button type="button" id="menosAcompanantes">−</button>
-                        <span id="numeroAcompanantes">1</span>
-                        <button type="button" id="masAcompanantes">+</button>
-                    </div>
-                    <input type="hidden" id="acompanantes" name="acompanantes" value="0">
-                </div>
-
-                <div class="campo">
-                    <label>¿Venís con niños?</label>
-                    <div class="opciones">
-                        <button type="button" class="opcion ninos" data-value="si">Sí</button>
-                        <button type="button" class="opcion ninos" data-value="no">No</button>
-                    </div>
-                    <input type="hidden" id="ninos" name="ninos">
-                </div>
-
-                <div id="cantidadNinos" class="campo oculto">
-                    <label>¿Cuántos niños?</label>
-                    <div class="contador">
-                        <button type="button" id="menosNinos">−</button>
-                        <span id="numeroNinos">1</span>
-                        <button type="button" id="masNinos">+</button>
-                    </div>
-                    <input type="hidden" id="cantidad_ninos" name="cantidad_ninos" value="0">
-                </div>
-
-                <div class="campo">
-                    <label for="bebida_comida">¿Querés avisarnos si vas a traer algo para compartir? (Opcional)</label>
-                    <input type="text" id="bebida_comida" name="bebida_comida" placeholder="Opcional">
-                </div>
-
-                <div class="campo">
-                    <label for="mensaje">¿Querés dejarle un mensaje a Lina? (Opcional)</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí unas palabras..."></textarea>
-                </div>
-
-                <button type="submit" class="enviar">CONFIRMAR ASISTENCIA</button>
-            </div>
-
-            <div id="respuestaNo" class="respuesta-no">
-                <div class="ornamento">❦</div>
-                <h3>Gracias por avisarnos</h3>
-                <p>Sentimos que no puedas acompañarnos. Tu cariño también forma parte de este día.</p>
-                <button type="submit" class="enviar">ENVIAR RESPUESTA</button>
-            </div>
-        </form>
-
-        <div id="mensajeFinal" class="mensaje-final">
-            <div class="ornamento">❦</div>
-            <h2>Muchas gracias</h2>
-            <p>Gracias por ser parte de esta celebración tan especial.</p>
-        </div>
-
-        <div class="volver">
-            <a href="index.html">← Volver a la invitación</a>
-        </div>
-    </div>
-</main>
-
-<script src="assets/formulario.js"></script>
-</body>
-</html>
+<html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmación | Lina</title>
+<link rel="stylesheet" href="assets/formulario.css?v=3">
+</head><body>
+<main class="formulario-pagina"><div class="tarjeta-formulario">
+<p class="mini">100 AÑOS</p><h1>Lina</h1><div class="ornamento">❦</div>
+<h2>¿Nos acompañás?</h2>
+<p class="introduccion">Queremos celebrar este momento tan especial junto a vos.<br><br><strong>La fecha de la celebración se anunciará próximamente.</strong></p>
+<form id="formularioRSVP" action="https://formspree.io/f/mqpkepzv" method="POST">
+<div class="campo"><label for="nombre">¿Cuál es tu nombre?</label><input type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre" required></div>
+<div class="campo"><label>¿Vas a acompañarnos?</label><div class="opciones"><button type="button" class="opcion asistencia" data-value="si">Sí, voy a estar</button><button type="button" class="opcion asistencia" data-value="no">No voy a poder</button></div><input type="hidden" id="asistencia" name="asistencia" required></div>
+<div id="preguntasSi" class="preguntas-ocultas">
+<div class="campo"><label>¿Venís acompañado/a?</label><div class="opciones"><button type="button" class="opcion acompanado" data-value="si">Sí</button><button type="button" class="opcion acompanado" data-value="no">No</button></div><input type="hidden" id="acompanado" name="acompanado"></div>
+<div id="cantidadAcompanantes" class="campo oculto"><label>¿Cuántas personas vienen con vos?</label><div class="contador"><button type="button" id="menosAcompanantes">−</button><span id="numeroAcompanantes">1</span><button type="button" id="masAcompanantes">+</button></div><input type="hidden" id="acompanantes" name="acompanantes" value="1"></div>
+<div class="campo"><label>¿Venís con niños?</label><div class="opciones"><button type="button" class="opcion ninos" data-value="si">Sí</button><button type="button" class="opcion ninos" data-value="no">No</button></div><input type="hidden" id="ninos" name="ninos"></div>
+<div id="cantidadNinos" class="campo oculto"><label>¿Cuántos niños?</label><div class="contador"><button type="button" id="menosNinos">−</button><span id="numeroNinos">1</span><button type="button" id="masNinos">+</button></div><input type="hidden" id="cantidad_ninos" name="cantidad_ninos" value="1"></div>
+<div class="campo"><label for="bebida_comida">¿Querés avisarnos si vas a traer algo para compartir? <span>(Opcional)</span></label><input type="text" id="bebida_comida" name="bebida_comida" placeholder="Opcional"></div>
+<div class="campo"><label for="mensaje">¿Querés dejarle un mensaje a Lina? <span>(Opcional)</span></label><textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí unas palabras..."></textarea></div>
+<button type="submit" class="enviar">ENVIAR CONFIRMACIÓN</button></div>
+<div id="respuestaNo" class="respuesta-no"><div class="ornamento">❦</div><h3>Gracias por avisarnos</h3><p>Sentimos que no puedas acompañarnos. Tu cariño también forma parte de este día.</p><button type="submit" class="enviar">ENVIAR RESPUESTA</button></div>
+</form>
+<div id="mensajeFinal" class="mensaje-final"><div class="ornamento">❦</div><h2>Muchas gracias</h2><p>Tu respuesta fue enviada correctamente.</p></div>
+<div class="volver"><a href="index.html">← Volver a la invitación</a></div>
+</div></main>
+<script src="assets/formulario.js?v=3"></script></body></html>
