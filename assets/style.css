@@ -1,898 +1,396 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
 
 :root {
-    --fondo: #fff9f5;
-    --rosa: #d87570;
-    --rosa-suave: #e8aaa4;
-    --texto: #493a39;
+    --marfil: #f5f0e7;
+    --papel: #fbf8f1;
+    --champagne: #e8decb;
+    --dorado: #a88a55;
+    --dorado-claro: #c7b181;
+    --oliva: #656653;
+    --texto: #403d36;
+    --suave: #756f62;
+    --borde: #cdbf9f;
 }
-
 
 * {
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     margin: 0;
-    background: #eadbd5;
+    background: #d9d1c2;
     color: var(--texto);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
+    font-family: "Cormorant Garamond", Georgia, serif;
 }
 
+button,
+a {
+    font-family: inherit;
+}
 
 .site {
-    width: min(100%, 1100px);
+    width: min(100%, 1050px);
     margin: auto;
-    background: var(--fondo);
-
-    box-shadow:
-        0 0 35px
-        rgba(0, 0, 0, .08);
+    background: var(--papel);
+    box-shadow: 0 0 45px rgba(45, 40, 30, .14);
 }
-
-
-/* ==========================================
-   PORTADA
-========================================== */
 
 .portada {
     min-height: 100svh;
-
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-
-    padding: 30px 20px;
-
+    padding: 45px 24px;
+    text-align: center;
     background:
-        radial-gradient(
-            circle at center 35%,
-            #ffffff 0%,
-            #fff9f5 55%,
-            #f8e7e2 100%
-        );
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,.9), transparent 48%),
+        linear-gradient(135deg, #f7f2e9, #e9dfcc);
 }
 
-
-.portada::before {
-    content: "";
-
+.marco-portada {
     position: absolute;
-    inset: 15px;
-
-    border:
-        1px solid
-        var(--rosa-suave);
-
+    inset: 18px;
+    border: 1px solid var(--dorado-claro);
     pointer-events: none;
 }
 
+.marco-portada::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(168,138,85,.35);
+}
 
 .portada-contenido {
-    width: 100%;
-    max-width: 600px;
-
-    text-align: center;
-
     position: relative;
     z-index: 2;
+    width: 100%;
+    max-width: 650px;
 }
 
-
-.pequeno {
-    margin: 0 0 5px;
-
-    color: #a96b66;
-
-    font-size:
-        clamp(13px, 2vw, 17px);
-
-    letter-spacing: .22em;
+.eyebrow,
+.etiqueta {
+    margin: 0;
+    color: var(--oliva);
+    font-size: 13px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
 }
 
+.ornamento {
+    color: var(--dorado);
+    font-size: 34px;
+    line-height: 1;
+    margin: 18px 0;
+}
+
+.aniversario {
+    margin: 0;
+    color: var(--dorado);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(110px, 20vw, 190px);
+    line-height: .8;
+    font-weight: 400;
+}
+
+.aniversario-sub {
+    margin: 15px 0 0;
+    color: var(--texto);
+    font-size: 18px;
+    letter-spacing: .55em;
+    padding-left: .55em;
+}
 
 .portada h1 {
-    margin: 0;
-
-    color: #df8c86;
-
-    font-size:
-        clamp(45px, 8vw, 72px);
-
-    line-height: 1;
-
-    letter-spacing: .08em;
+    margin: 20px 0 8px;
+    color: var(--texto);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(55px, 10vw, 88px);
+    font-weight: 400;
 }
 
-
-.mis18 {
-    margin-top: 4px;
-
-    color: var(--rosa);
-
-    font-family:
-        "Great Vibes",
-        cursive;
-
-    font-size:
-        clamp(42px, 7vw, 62px);
-
-    line-height: 1;
+.linea-dorada {
+    width: 95px;
+    height: 1px;
+    margin: 18px auto;
+    background: var(--dorado);
 }
 
-
-.mis18 span {
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-style: italic;
+.frase-portada {
+    margin: 25px auto 30px;
+    color: var(--suave);
+    font-size: clamp(20px, 3vw, 25px);
+    line-height: 1.45;
 }
 
-
-/* ==========================================
-   GATO
-========================================== */
-
-.gato {
-    width: 115px;
-    height: 115px;
-
-    margin:
-        25px auto 15px;
-}
-
-
-.gato img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    display: block;
-
-    filter:
-        drop-shadow(
-            0 8px 10px
-            rgba(90, 60, 55, .18)
-        );
-
-    animation:
-        gato-flota 3s ease-in-out infinite;
-}
-
-
-@keyframes gato-flota {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-6px);
-    }
-
-}
-
-
-/* ==========================================
-   BOTÓN PEQUEÑO DE ENTRADA
-========================================== */
-
-.boton-entrar {
-    display: block;
-
-    margin:
-        0 auto 22px;
-
-    padding:
-        7px 15px;
-
-    border:
-        1px solid #d9aaa5;
-
-    border-radius: 999px;
-
-    background:
-        rgba(255, 255, 255, .75);
-
-    color: #946863;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 14px;
-
-    letter-spacing: .04em;
-
+.boton-entrar,
+.boton-principal {
+    display: inline-block;
+    border: 1px solid var(--dorado);
+    background: var(--dorado);
+    color: #fffdf7;
+    padding: 13px 28px;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: .12em;
     cursor: pointer;
-
-    box-shadow:
-        0 3px 8px
-        rgba(100, 65, 60, .08);
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
+    transition: .25s ease;
 }
 
-
-.boton-entrar:hover {
-    transform:
-        translateY(-2px);
-
-    background: white;
+.boton-entrar:hover,
+.boton-principal:hover {
+    background: #927544;
+    transform: translateY(-2px);
 }
 
-
-.boton-entrar:active {
-    transform:
-        scale(.96);
+.fecha-portada {
+    margin: 22px 0 0;
+    color: var(--suave);
+    font-size: 13px;
+    letter-spacing: .12em;
 }
-
-
-/* ==========================================
-   FECHA
-========================================== */
-
-.fecha {
-    color: #b66c66;
-
-    font-size:
-        clamp(
-            16px,
-            2.5vw,
-            21px
-        );
-
-    letter-spacing: .15em;
-}
-
-
-.te-espero {
-    margin-top: 15px;
-
-    color: #9b706b;
-
-    font-size: 17px;
-}
-
-
-/* ==========================================
-   DECORACIÓN
-========================================== */
-
-.decoracion {
-    position: absolute;
-
-    color: #dfa09a;
-
-    pointer-events: none;
-
-    font-size: 28px;
-}
-
-
-.d1 {
-    top: 17%;
-    left: 10%;
-}
-
-
-.d2 {
-    top: 25%;
-    right: 10%;
-
-    font-size: 32px;
-}
-
-
-.d3 {
-    bottom: 17%;
-    left: 13%;
-}
-
-
-/* ==========================================
-   SEGUNDA PANTALLA
-========================================== */
 
 .invitacion {
     display: none;
-
     min-height: 100svh;
-
-    padding:
-        48px 25px 70px;
-
+    padding: 70px 22px 80px;
     background:
-        radial-gradient(
-            circle at 50% 18%,
-            #fff 0,
-            #fff9f5 45%,
-            #fbe9e4 100%
-        );
+        linear-gradient(rgba(251,248,241,.94), rgba(251,248,241,.97)),
+        repeating-linear-gradient(0deg, transparent 0, transparent 35px, rgba(168,138,85,.035) 36px);
 }
-
 
 .invitacion.mostrar {
     display: block;
-
-    animation:
-        entrar .7s ease both;
+    animation: aparecer .7s ease both;
 }
 
-
-@keyframes entrar {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
 
 .contenido {
-    max-width: 460px;
-
+    width: min(100%, 650px);
     margin: auto;
-
     text-align: center;
 }
 
-
-.mini-titulo {
-    color: #bd6862;
-
-    letter-spacing: .25em;
-
-    font-size: 18px;
-
-    margin:
-        0 0 7px;
-}
-
-
-.invitacion h1 {
+.cabecera h2 {
     margin: 0;
-
-    color: #d76862;
-
-    font-size:
-        clamp(
-            55px,
-            15vw,
-            82px
-        );
-
-    line-height: 1;
+    color: var(--texto);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(48px, 9vw, 70px);
+    font-weight: 400;
 }
 
-
-.cumple {
-    margin:
-        5px 0 0;
-
-    font-size: 28px;
-
-    letter-spacing: .25em;
+.cien {
+    margin: 5px 0 0;
+    color: var(--dorado);
+    font-size: 27px;
+    letter-spacing: .15em;
 }
-
-
-.numero {
-    color: #ee918a;
-
-    font-size: 145px;
-
-    line-height: .85;
-
-    margin-top: 25px;
-}
-
-
-.nombre-script {
-    font-family:
-        "Great Vibes",
-        cursive;
-
-    color: #d96862;
-
-    font-size: 75px;
-
-    margin-top: -8px;
-}
-
-
-.fecha-card {
-    margin:
-        24px auto 0;
-
-    width: fit-content;
-
-    padding:
-        11px 22px;
-
-    border:
-        1px solid #efb4ae;
-
-    border-radius: 999px;
-
-    color: #bf6862;
-
-    font-size: 22px;
-}
-
-
-.separador {
-    color: #df827b;
-
-    font-size: 34px;
-
-    margin:
-        24px 0;
-}
-
 
 .mensaje {
-    font-size: 23px;
-
-    line-height: 1.5;
-
-    margin:
-        0 auto 35px;
+    max-width: 590px;
+    margin: 28px auto 45px;
+    color: var(--suave);
+    font-size: 21px;
+    line-height: 1.6;
 }
 
-
-/* ==========================================
-   INFORMACIÓN
-========================================== */
-
-.bloque-info {
-    margin-top: 25px;
-
-    padding:
-        25px 20px;
-
-    border:
-        1px solid #efb4ae;
-
-    border-radius: 22px;
-
-    background:
-        rgba(255, 255, 255, .5);
+.bloque-info,
+.bloque-especial,
+.confirmacion,
+.compartir {
+    margin-top: 28px;
+    padding: 34px 30px;
+    border: 1px solid var(--borde);
+    background: rgba(255,255,255,.42);
 }
 
-
-.bloque-info h2 {
-    color: #d76862;
-
-    font-size: 28px;
-
-    margin-top: 0;
+.bloque-info h3,
+.confirmacion h3,
+.compartir h3 {
+    margin: 8px 0 22px;
+    color: var(--texto);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
 }
-
 
 .dato-evento {
-    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 500px;
+    margin: 25px auto;
+    text-align: left;
 }
 
+.icono {
+    color: var(--dorado);
+    font-size: 15px;
+    margin-top: 7px;
+}
 
 .dato-evento strong {
-    color: #c66b65;
-
-    font-size: 21px;
+    color: var(--oliva);
+    font-size: 19px;
+    font-weight: 600;
 }
-
 
 .dato-evento p {
+    margin: 3px 0 0;
+    color: var(--texto);
     font-size: 19px;
-
-    margin:
-        4px 0 0;
-}
-
-
-/* ==========================================
-   UNAS COSITAS IMPORTANTES
-========================================== */
-
-.reglas {
-    margin-top: 65px;
-}
-
-
-.titulo-reglas {
-    color: #d76862;
-
-    font-family:
-        "Great Vibes",
-        cursive;
-
-    font-size: 42px;
-
-    font-weight: 400;
-
-    margin-bottom: 25px;
-}
-
-
-.regla {
-    margin-bottom: 12px;
-
-    border:
-        1px solid #e6b5b0;
-
-    border-radius: 16px;
-
-    overflow: hidden;
-
-    background:
-        rgba(255, 255, 255, .55);
-}
-
-
-.regla-titulo {
-    width: 100%;
-
-    border: 0;
-
-    background: transparent;
-
-    padding: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    color: #644c49;
-
-    font-family: inherit;
-
-    font-size: 21px;
-
-    cursor: pointer;
-
-    text-align: left;
-}
-
-
-.flecha {
-    color: #d87570;
-
-    font-size: 28px;
-
-    transition:
-        transform .3s ease;
-}
-
-
-.regla.abierta .flecha {
-    transform:
-        rotate(45deg);
-}
-
-
-.regla-contenido {
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition:
-        max-height .35s ease;
-}
-
-
-.regla.abierta .regla-contenido {
-    max-height: 200px;
-}
-
-
-.regla-contenido p {
-    margin:
-        0 20px 20px;
-
-    font-size: 19px;
-
     line-height: 1.45;
-
-    text-align: left;
 }
 
-
-.gracias {
-    margin-top: 25px;
-
-    font-size: 20px;
+.boton-secundario {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 21px;
+    border: 1px solid var(--dorado);
+    color: var(--texto);
+    background: transparent;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: .08em;
+    transition: .25s ease;
 }
 
+.boton-secundario:hover {
+    background: var(--champagne);
+    transform: translateY(-2px);
+}
 
-/* ==========================================
-   CONFIRMACIÓN
-========================================== */
+.bloque-especial {
+    padding: 45px 25px;
+    background: var(--champagne);
+}
+
+.numero-grande {
+    margin: 0;
+    color: var(--dorado);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 105px;
+    line-height: .9;
+}
+
+.texto-centro {
+    margin: 18px 0 0;
+    color: var(--suave);
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.pequeño {
+    margin: 22px 0 0;
+    font-size: 27px;
+}
+
+.detalles p:not(.etiqueta) {
+    margin: 0 auto;
+    max-width: 510px;
+    color: var(--suave);
+    font-size: 19px;
+    line-height: 1.55;
+}
 
 .confirmacion {
-    margin-top: 65px;
-
-    padding:
-        30px 22px 35px;
-
-    border-radius: 25px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #f8dfdb,
-            #fdf2ef
-        );
-
-    border:
-        1px solid #e6b0aa;
+    margin-top: 42px;
+    background: #eee7d9;
 }
 
-
-.confirmacion h2 {
-    margin: 0;
-
-    font-size: 35px;
+.confirmacion > p:not(.etiqueta),
+.compartir > p:not(.etiqueta) {
+    max-width: 500px;
+    margin: 0 auto 25px;
+    color: var(--suave);
+    font-size: 19px;
+    line-height: 1.5;
 }
 
-
-.confirmacion h3 {
-    color: #d76862;
-
-    font-size: 31px;
-
-    margin:
-        0 0 10px;
+.compartir {
+    background: transparent;
 }
-
-
-.confirmacion p {
-    font-size: 20px;
-
-    line-height: 1.4;
-}
-
-
-/* ==========================================
-   BOTÓN CONFIRMAR ASISTENCIA
-========================================== */
-
-.boton-rsvp {
-
-    display: inline-block;
-
-    width: auto;
-
-    text-decoration: none;
-
-    border: 0;
-
-    border-radius: 999px;
-
-    background: #dc7770;
-
-    color: white;
-
-    padding:
-        15px 25px;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 18px;
-
-    letter-spacing: .03em;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 7px 15px
-        rgba(190, 90, 85, .18);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-}
-
-
-.boton-rsvp:hover {
-    transform:
-        translateY(-2px);
-
-    box-shadow:
-        0 10px 20px
-        rgba(190, 90, 85, .22);
-}
-
-
-.boton-rsvp:active {
-    transform:
-        scale(.97);
-}
-
-
-/* ==========================================
-   FOOTER
-========================================== */
 
 footer {
-    margin-top: 70px;
+    margin-top: 65px;
+    padding-top: 30px;
+    border-top: 1px solid var(--borde);
 }
 
-
-.corazones {
-    color: #df827b;
-
-    font-size: 25px;
+footer .ornamento {
+    margin: 0 0 12px;
 }
-
 
 .firma {
-    font-family:
-        "Great Vibes",
-        cursive;
-
-    color: #d76862;
-
-    font-size: 60px;
+    margin: 0;
+    color: var(--texto);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 42px;
 }
 
-
-footer p {
-    font-size: 20px;
+footer p:last-child {
+    margin: 8px 0 0;
+    color: var(--suave);
+    font-size: 17px;
 }
-
-
-/* ==========================================
-   CELULAR
-========================================== */
 
 @media (max-width: 600px) {
+    .marco-portada {
+        inset: 10px;
+    }
+
+    .marco-portada::after {
+        inset: 6px;
+    }
 
     .portada {
-        padding:
-            25px 16px;
+        padding: 35px 20px;
     }
 
-
-    .portada::before {
-        inset: 9px;
-    }
-
-
-    .gato {
-        width: 105px;
-        height: 105px;
-
-        margin-top: 23px;
-    }
-
-
-    .boton-entrar {
-        font-size: 13px;
-
-        padding:
-            7px 14px;
-    }
-
-
-    .fecha {
-        font-size: 16px;
-    }
-
-
-    .invitacion {
-        padding:
-            40px 18px 60px;
-    }
-
-
-    .cumple {
-        font-size: 23px;
-    }
-
-
-    .numero {
+    .aniversario {
         font-size: 115px;
     }
 
-
-    .nombre-script {
-        font-size: 65px;
+    .aniversario-sub {
+        font-size: 15px;
     }
-
-
-    .titulo-reglas {
-        font-size: 38px;
-    }
-
-
-    .regla-titulo {
-        font-size: 18px;
-        padding: 16px;
-    }
-
-
-    .confirmacion h3 {
-        font-size: 28px;
-    }
-
-
-    .boton-rsvp {
-        font-size: 17px;
-
-        padding:
-            14px 22px;
-    }
-
-
-    .d1,
-    .d2,
-    .d3 {
-        display: none;
-    }
-
-}
-
-
-@media (max-width: 380px) {
-
-    .gato {
-        width: 95px;
-        height: 95px;
-    }
-
 
     .portada h1 {
-        font-size: 45px;
+        font-size: 60px;
     }
 
-
-    .mis18 {
-        font-size: 42px;
+    .invitacion {
+        padding: 55px 15px 65px;
     }
 
-
-    .numero {
-        font-size: 100px;
+    .bloque-info,
+    .bloque-especial,
+    .confirmacion,
+    .compartir {
+        padding: 28px 20px;
     }
 
-
-    .nombre-script {
-        font-size: 58px;
+    .mensaje {
+        font-size: 19px;
     }
 
+    .dato-evento p {
+        font-size: 18px;
+    }
+
+    .boton-principal,
+    .boton-secundario,
+    .boton-entrar {
+        max-width: 100%;
+    }
 }
