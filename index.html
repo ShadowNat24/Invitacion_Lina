@@ -119,13 +119,6 @@
                 </ul>
             </section>
 
-            <section class="bloque-info terminos">
-                <p class="etiqueta">TÉRMINOS Y CONDICIONES</p>
-                <h3>Información importante</h3>
-                <p class="texto-terminos">Al enviar la confirmación, aceptás que la familia use los datos proporcionados únicamente para organizar la celebración. La confirmación es individual y debe reflejar la cantidad real de personas que asistirán. Si tus planes cambian, avisá a la familia.</p>
-                <p class="texto-terminos">¿Te gustaría una invitación personalizada para tu propio evento? Es un servicio de diseño pago, no gratuito. Consultá el precio y las condiciones antes de solicitarla.</p>
-            </section>
-
             <section class="bloque-info recordatorio">
                 <p class="etiqueta">UN PEQUEÑO RECORDATORIO</p>
                 <h3>¿Ya confirmaste?</h3>
@@ -156,6 +149,15 @@
                 >💬 COMPARTIR POR WHATSAPP</a>
             </section>
 
+            <section class="terminos-toggle">
+                <button type="button" id="botonTerminos" class="boton-secundario" aria-expanded="false" aria-controls="contenidoTerminos">TÉRMINOS Y CONDICIONES</button>
+                <div id="contenidoTerminos" class="contenido-terminos" hidden>
+                    <h3>Información importante</h3>
+                    <p class="texto-terminos">Al enviar la confirmación, aceptás que la familia use los datos proporcionados únicamente para organizar la celebración. La confirmación debe reflejar la cantidad real de personas que asistirán. Si tus planes cambian, avisá a la familia.</p>
+                    <p class="texto-terminos">¿Te gustaría una invitación personalizada para tu propio evento? Es un servicio de diseño pago, no gratuito. Consultá el precio y las condiciones antes de solicitarla.</p>
+                </div>
+            </section>
+
             <footer>
                 <div class="ornamento">❦</div>
                 <p class="firma">Lina</p>
@@ -166,6 +168,19 @@
     </section>
 </main>
 
-<script src="assets/script.js"></script>
+<script src="assets/script.js?v=7"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+ const button = document.getElementById("botonTerminos");
+ const content = document.getElementById("contenidoTerminos");
+ if (!button || !content) return;
+ button.addEventListener("click", function () {
+  const open = button.getAttribute("aria-expanded") === "true";
+  button.setAttribute("aria-expanded", String(!open));
+  content.hidden = open;
+  button.textContent = open ? "TÉRMINOS Y CONDICIONES" : "OCULTAR TÉRMINOS Y CONDICIONES";
+ });
+});
+</script>
 </body>
 </html>
