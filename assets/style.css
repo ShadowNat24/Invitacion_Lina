@@ -6,7 +6,7 @@
     --champagne: #e8decb;
     --dorado: #a88a55;
     --dorado-claro: #c7b181;
-    --oliva: #656653;
+    --oliva: #356b68;
     --texto: #403d36;
     --suave: #756f62;
     --borde: #cdbf9f;
@@ -415,3 +415,10 @@ footer p:last-child {
 .contenido-terminos { max-width: 650px; margin: 18px auto 0; padding: 22px 24px; border: 1px solid var(--borde); background: rgba(255,255,255,.42); text-align: center; }
 .contenido-terminos h3 { margin: 0 0 14px; font-family: "Playfair Display", Georgia, serif; font-size: 23px; font-weight: 400; }
 .contenido-terminos[hidden] { display: none; }
+
+
+/* Verde más marino, manteniendo el estilo elegante de Lina */
+:root {
+    --oliva: #356b68;
+}
+.eyebrow, .etiqueta { color: var(--oliva); }
