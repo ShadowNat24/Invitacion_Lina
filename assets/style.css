@@ -6,7 +6,7 @@
     --champagne: #e8decb;
     --dorado: #a88a55;
     --dorado-claro: #c7b181;
-    --oliva: #356b68;
+    --oliva: #245e5a;
     --texto: #403d36;
     --suave: #756f62;
     --borde: #cdbf9f;
@@ -422,3 +422,41 @@ footer p:last-child {
     --oliva: #356b68;
 }
 .eyebrow, .etiqueta { color: var(--oliva); }
+
+
+/* Cierre con la foto de Lina */
+.foto-lina-final {
+    margin: 48px auto 0;
+    padding: 32px 24px;
+    border: 1px solid var(--borde);
+    background: rgba(255,255,255,.38);
+}
+.foto-lina-final h3 {
+    margin: 10px 0 24px;
+    color: var(--texto);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+.foto-lina-final figure { margin: 0 auto; max-width: 460px; }
+.foto-lina-final img {
+    display: block;
+    width: 100%;
+    max-height: 620px;
+    object-fit: cover;
+    object-position: center 35%;
+    border: 5px solid #fffdf7;
+    outline: 1px solid var(--dorado-claro);
+    box-shadow: 0 8px 26px rgba(45,40,30,.13);
+}
+.foto-lina-final figcaption {
+    margin-top: 17px;
+    color: var(--suave);
+    font-size: 20px;
+    font-style: italic;
+}
+@media (max-width: 600px) {
+ .foto-lina-final { padding: 25px 17px; }
+ .foto-lina-final h3 { font-size: 26px; }
+ .foto-lina-final img { max-height: 560px; }
+}
