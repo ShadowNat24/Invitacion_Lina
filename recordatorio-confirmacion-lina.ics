@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Invitacion Lina//Recordatorio RSVP//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:recordatorio-confirmacion-lina-20261107@shadownat24.github.io
+DTSTAMP:20261020T125500Z
+DTSTART:20261107T140000Z
+DTEND:20261107T141500Z
+SUMMARY:Recordá confirmar tu asistencia a los 100 años de Lina
+DESCRIPTION:Si todavía no confirmaste tu asistencia a la celebración de Lina\, completá el formulario de la invitación. Si ya respondiste\, ignorá este recordatorio. Si tenés dudas\, consultá con la familia. Invitación: https://shadownat24.github.io/Invitacion_Lina/
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Recordá confirmar tu asistencia a los 100 años de Lina
+END:VALARM
+END:VEVENT
+END:VCALENDAR
