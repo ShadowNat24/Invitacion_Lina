@@ -407,3 +407,11 @@ footer p:last-child {
  .texto-terminos { font-size: 18px; }
  .nota-recordatorio { font-size: 16px; }
 }
+
+
+/* Términos y condiciones como botón discreto al final */
+.terminos-toggle { margin: 30px auto 0; text-align: center; }
+.terminos-toggle > .boton-secundario { cursor: pointer; font-size: 15px; }
+.contenido-terminos { max-width: 650px; margin: 18px auto 0; padding: 22px 24px; border: 1px solid var(--borde); background: rgba(255,255,255,.42); text-align: center; }
+.contenido-terminos h3 { margin: 0 0 14px; font-family: "Playfair Display", Georgia, serif; font-size: 23px; font-weight: 400; }
+.contenido-terminos[hidden] { display: none; }
